@@ -45,19 +45,21 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       backgroundColor: Color(0xff10223d),
       appBar: AppBar(
-        title: Text("Language Translator"),
+        title: Text("Language Translator",style: TextStyle(color: Colors.white),),
         centerTitle: true,
         backgroundColor: Color(0xff10223d),
-        elevation: 0,
+        elevation: 4,
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(
-                height: 50,
+                height: 5,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -158,8 +160,11 @@ class _LanguageTranslationPageState extends State<LanguageTranslationPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff2b3c5a)),
+                        backgroundColor: Colors.white,
+                    foregroundColor: Color(0xff10223d)),
+
                     onPressed: () {
                       translate(
                           getLanguageCode(originalLanguage),
